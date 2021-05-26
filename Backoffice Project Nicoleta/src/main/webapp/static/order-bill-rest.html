@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Bill</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+          rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+
+    <script src="url.js"></script>
+    <script src="order-bill-rest.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>
+        BILL for ORDER <span id="titleOrderNumber"></span>&nbsp;&nbsp;
+        <a id="buttonDone" class="btn btn-primary">Back To Orders</a>
+    </h2>
+
+    <table id="productTable" class="table table-striped">
+        <tr>
+            <th>Product</th>
+            <th>Base Price</th>
+            <th>Quantity</th>
+            <th>Discount(%)</th>
+            <th>Line Total</th>
+        </tr>
+        <tr id="productAddFormRow">
+            <td id="productAddName" placeholder="Product"></td>
+            <td id="productAddQuantity" placeholder="Quantity"></td>
+        </tr>
+        <tr>
+            <th>Lines Total: <span id="orderValue"></span>$</th>
+        </tr>
+        <tr>
+            <th>Shipping Taxes: <span id="shippingValue"></span>$</th>
+        </tr>
+        <tr>
+            <th>Order Total: <span id="orderTotal" style="color: #e8000d;"></span>$</th>
+        </tr>
+    </table>
+    <div class="alert alert-danger">!!! FREE SHIPPING for Lines Total >=1000 !!!</div>
+</div>
+</body>
+</html>
